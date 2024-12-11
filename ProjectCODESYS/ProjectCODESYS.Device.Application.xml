@@ -7,23 +7,37 @@
   </Header>
   <TypeList>
     <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
-    <TypeUserDef name="T_sMachineCenter" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
+    <TypeUserDef name="T_sMachineCenter" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
       <UserDefElement iecname="Start" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Reset" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProduceLids" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_sPusher" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="sPusher">
+      <UserDefElement iecname="_BackLimit" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="_FrontLimit" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Pusher" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
     </TypeUserDef>
   </TypeList>
   <NodeList>
     <Node name="Application">
       <Node name="PLC_PRG">
+        <Node name="_DiffuseSensorGreenLid" type="T_BOOL" access="ReadWrite" />
         <Node name="_StartButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_StopButtonTemp" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenLid" type="T_sPusher" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M3" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M4" type="T_sMachineCenter" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
+        <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalGreenProduct2" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalGreenProduct3" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalMetalProduct1" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalMetalProduct2" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalMetalProduct3" type="T_BOOL" access="ReadWrite" />
         <Node name="CurvedProdToSelConveyor" type="T_BOOL" access="ReadWrite" />
         <Node name="EmitterConveyorM1" type="T_BOOL" access="ReadWrite" />
         <Node name="EmitterConveyorM2" type="T_BOOL" access="ReadWrite" />
@@ -33,9 +47,18 @@
         <Node name="ExitConveyorM2" type="T_BOOL" access="ReadWrite" />
         <Node name="ExitConveyorM3" type="T_BOOL" access="ReadWrite" />
         <Node name="ExitConveyorM4" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenProductBaseConveyor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenProductBaseConveyor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenProductLidConveyor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenProductLidConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor1" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor3" type="T_BOOL" access="ReadWrite" />
+        <Node name="MainSeparatorConveyor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalProductBaseConveyor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalProductBaseConveyor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalProductLidConveyor1" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalProductLidConveyor2" type="T_BOOL" access="ReadWrite" />
       </Node>
     </Node>
   </NodeList>
