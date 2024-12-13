@@ -7,6 +7,7 @@
   </Header>
   <TypeList>
     <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
     <TypeUserDef name="T_sMachineCenter" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
       <UserDefElement iecname="Start" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
@@ -22,14 +23,32 @@
   <NodeList>
     <Node name="Application">
       <Node name="PLC_PRG">
+        <Node name="_DiffuseSensorGreenBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorGreenLid" type="T_BOOL" access="ReadWrite" />
+        <Node name="_DiffuseSensorMetalBase" type="T_BOOL" access="ReadWrite" />
+        <Node name="_DiffuseSensorMetalLid" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenBaseSensorStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenLidClamped" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenLidSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_StartButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_StopButtonTemp" type="T_BOOL" access="ReadWrite" />
+        <Node name="_VisionGreenBase" type="T_DINT" access="ReadWrite" />
+        <Node name="_VisionGreenLid" type="T_DINT" access="ReadWrite" />
+        <Node name="_VisionMetalBase" type="T_DINT" access="ReadWrite" />
+        <Node name="_VisionMetalLid" type="T_DINT" access="ReadWrite" />
+        <Node name="GreenBase" type="T_sPusher" access="ReadWrite" />
+        <Node name="GreenBaseClamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenBaseProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenLid" type="T_sPusher" access="ReadWrite" />
+        <Node name="GreenLidClamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenLidProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M3" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M4" type="T_sMachineCenter" access="ReadWrite" />
+        <Node name="MetalBase" type="T_sPusher" access="ReadWrite" />
+        <Node name="MetalLid" type="T_sPusher" access="ReadWrite" />
+        <Node name="Teste" type="T_BOOL" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
