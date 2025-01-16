@@ -2,7 +2,7 @@
 <Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
   <Header>
     <Version>3.5.14.0</Version>
-    <SymbolConfigObject version="4.5.2.0" runtimeid="3.5.20.30" libversion="4.5.0.0" compiler="3.5.20.30" lmm="3.5.20.30" profile="CODESYS V3.5 SP20 Patch 3+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
+    <SymbolConfigObject version="4.5.2.0" runtimeid="3.5.20.40" libversion="4.5.0.0" compiler="3.5.20.40" lmm="3.5.20.40" profile="CODESYS V3.5 SP20 Patch 4+" settings="SupportOPCUA, LayoutCalculator=OptimizedClientSideLayoutCalculator" />
     <ProjectInfo name="ProjectCODESYS" devicename="Device" appname="Application" />
   </Header>
   <TypeList>
@@ -27,9 +27,18 @@
         <Node name="_DiffuseSensorGreenLid" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalLid" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenBaseClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenBaseSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenLidClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenLidSensorStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenMovingX" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenMovingZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalBaseClamped" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalBaseSensorStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalLidClamped" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalLidSensorStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalMovingX" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalMovingZ" type="T_BOOL" access="ReadWrite" />
         <Node name="_StartButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_StopButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_VisionGreenBase" type="T_DINT" access="ReadWrite" />
@@ -39,16 +48,27 @@
         <Node name="GreenBase" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenBaseClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBaseProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenGrabProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenLid" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenLidClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenLidProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenMovX" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M3" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M4" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="MetalBase" type="T_sPusher" access="ReadWrite" />
+        <Node name="MetalBaseClamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalBaseProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalGrabProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalLid" type="T_sPusher" access="ReadWrite" />
-        <Node name="Teste" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalLidClamp" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalLidProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalMovX" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
