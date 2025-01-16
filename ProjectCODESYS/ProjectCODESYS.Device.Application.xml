@@ -23,6 +23,7 @@
   <NodeList>
     <Node name="Application">
       <Node name="PLC_PRG">
+        <Node name="_DiffuseSensorGBox" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorGreenBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorGreenLid" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalBase" type="T_BOOL" access="ReadWrite" />
@@ -33,6 +34,7 @@
         <Node name="_GreenLidSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenMovingX" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenMovingZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenProdSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalBaseClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalBaseSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalLidClamped" type="T_BOOL" access="ReadWrite" />
@@ -54,6 +56,9 @@
         <Node name="GreenLidProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenMovX" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenPPXNegative" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenPPXPositive" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenProdClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
@@ -68,6 +73,8 @@
         <Node name="MetalLidProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalMovX" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalPPXNegative" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalPPXPositive" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
@@ -77,6 +84,7 @@
         <Node name="ConveyorFinalMetalProduct1" type="T_BOOL" access="ReadWrite" />
         <Node name="ConveyorFinalMetalProduct2" type="T_BOOL" access="ReadWrite" />
         <Node name="ConveyorFinalMetalProduct3" type="T_BOOL" access="ReadWrite" />
+        <Node name="ConveyorFinalMetalProduct4" type="T_BOOL" access="ReadWrite" />
         <Node name="CurvedProdToSelConveyor" type="T_BOOL" access="ReadWrite" />
         <Node name="EmitterConveyorM1" type="T_BOOL" access="ReadWrite" />
         <Node name="EmitterConveyorM2" type="T_BOOL" access="ReadWrite" />
@@ -98,6 +106,11 @@
         <Node name="MetalProductBaseConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalProductLidConveyor1" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalProductLidConveyor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorBoxStorage1" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorGreen1" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorGreen2" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorMetal1" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorMetal2" type="T_BOOL" access="ReadWrite" />
       </Node>
     </Node>
   </NodeList>
