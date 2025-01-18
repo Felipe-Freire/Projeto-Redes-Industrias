@@ -8,6 +8,7 @@
   <TypeList>
     <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
     <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
     <TypeUserDef name="T_sMachineCenter" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
       <UserDefElement iecname="Start" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
@@ -34,6 +35,7 @@
         <Node name="_GreenLidSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenMovingX" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenMovingZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="_GreenProdClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenProdSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalBaseClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalBaseSensorStop" type="T_BOOL" access="ReadWrite" />
@@ -47,19 +49,25 @@
         <Node name="_VisionGreenLid" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalBase" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalLid" type="T_DINT" access="ReadWrite" />
+        <Node name="ActiveGreenBase" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBase" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenBaseClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBaseProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenGrab" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenGrabProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenLid" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenLidClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenLidProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenMovX" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenPointX" type="T_REAL" access="ReadWrite" />
+        <Node name="GreenPointZ" type="T_REAL" access="ReadWrite" />
         <Node name="GreenPPXNegative" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenPPXPositive" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenProdClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenReleaseProduct" type="T_BOOL" access="ReadWrite" />
+        <Node name="GreenSetPointX" type="T_REAL" access="ReadWrite" />
+        <Node name="GreenSetPointZ" type="T_REAL" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M3" type="T_sMachineCenter" access="ReadWrite" />
@@ -76,6 +84,7 @@
         <Node name="MetalPPXNegative" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalPPXPositive" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
+        <Node name="SaidaFloat" type="T_REAL" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
