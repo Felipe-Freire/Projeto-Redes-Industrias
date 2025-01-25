@@ -27,6 +27,7 @@
         <Node name="_DiffuseSensorGBox" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorGreenBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorGreenLid" type="T_BOOL" access="ReadWrite" />
+        <Node name="_DiffuseSensorMBox" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalLid" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenBaseClamped" type="T_BOOL" access="ReadWrite" />
@@ -43,13 +44,14 @@
         <Node name="_MetalLidSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalMovingX" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalMovingZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalProdClamped" type="T_BOOL" access="ReadWrite" />
+        <Node name="_MetalProdSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_StartButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_StopButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_VisionGreenBase" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionGreenLid" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalBase" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalLid" type="T_DINT" access="ReadWrite" />
-        <Node name="ActiveGreenBase" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBase" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenBaseClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBaseProductStop" type="T_BOOL" access="ReadWrite" />
@@ -75,16 +77,21 @@
         <Node name="MetalBase" type="T_sPusher" access="ReadWrite" />
         <Node name="MetalBaseClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalBaseProductStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalGrab" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalGrabProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalLid" type="T_sPusher" access="ReadWrite" />
         <Node name="MetalLidClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalLidProductStop" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalMovX" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalMovZ" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalPointX" type="T_REAL" access="ReadWrite" />
+        <Node name="MetalPointZ" type="T_REAL" access="ReadWrite" />
         <Node name="MetalPPXNegative" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalPPXPositive" type="T_BOOL" access="ReadWrite" />
+        <Node name="MetalProdClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
-        <Node name="SaidaFloat" type="T_REAL" access="ReadWrite" />
+        <Node name="MetalSetPointX" type="T_REAL" access="ReadWrite" />
+        <Node name="MetalSetPointZ" type="T_REAL" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
