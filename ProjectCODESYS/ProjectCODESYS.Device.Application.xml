@@ -20,6 +20,14 @@
       <UserDefElement iecname="_FrontLimit" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Pusher" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
     </TypeUserDef>
+    <TypeUserDef name="T_sTurnable" size="6" nativesize="6" typeclass="Userdef" pouclass="STRUCTURE" iecname="sTurnable">
+      <UserDefElement iecname="Turn" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RollPositive" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RollNegative" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="BackLimit" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Limit0" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Limit90" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
   </TypeList>
   <NodeList>
     <Node name="Application">
@@ -46,6 +54,10 @@
         <Node name="_MetalMovingZ" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalProdClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_MetalProdSensorStop" type="T_BOOL" access="ReadWrite" />
+        <Node name="_SensorTurnableGreen" type="T_BOOL" access="ReadWrite" />
+        <Node name="_SensorTurnableIntersecMG" type="T_BOOL" access="ReadWrite" />
+        <Node name="_SensorTurnableMetal" type="T_BOOL" access="ReadWrite" />
+        <Node name="_SensorTurnableStorage" type="T_BOOL" access="ReadWrite" />
         <Node name="_StartButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_StopButtonTemp" type="T_BOOL" access="ReadWrite" />
         <Node name="_VisionGreenBase" type="T_DINT" access="ReadWrite" />
@@ -64,12 +76,11 @@
         <Node name="GreenMovZ" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenPointX" type="T_REAL" access="ReadWrite" />
         <Node name="GreenPointZ" type="T_REAL" access="ReadWrite" />
-        <Node name="GreenPPXNegative" type="T_BOOL" access="ReadWrite" />
-        <Node name="GreenPPXPositive" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenProdClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenSetPointX" type="T_REAL" access="ReadWrite" />
         <Node name="GreenSetPointZ" type="T_REAL" access="ReadWrite" />
+        <Node name="GreenTurn" type="T_sTurnable" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M3" type="T_sMachineCenter" access="ReadWrite" />
@@ -86,12 +97,11 @@
         <Node name="MetalMovZ" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalPointX" type="T_REAL" access="ReadWrite" />
         <Node name="MetalPointZ" type="T_REAL" access="ReadWrite" />
-        <Node name="MetalPPXNegative" type="T_BOOL" access="ReadWrite" />
-        <Node name="MetalPPXPositive" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalProdClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalSetPointX" type="T_REAL" access="ReadWrite" />
         <Node name="MetalSetPointZ" type="T_REAL" access="ReadWrite" />
+        <Node name="MetalTurn" type="T_sTurnable" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
@@ -123,8 +133,11 @@
         <Node name="MetalProductLidConveyor1" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalProductLidConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="RollerConveyorBoxStorage1" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorBoxStorage2" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorBoxStorage3" type="T_BOOL" access="ReadWrite" />
         <Node name="RollerConveyorGreen1" type="T_BOOL" access="ReadWrite" />
         <Node name="RollerConveyorGreen2" type="T_BOOL" access="ReadWrite" />
+        <Node name="RollerConveyorIntersectionMG" type="T_BOOL" access="ReadWrite" />
         <Node name="RollerConveyorMetal1" type="T_BOOL" access="ReadWrite" />
         <Node name="RollerConveyorMetal2" type="T_BOOL" access="ReadWrite" />
       </Node>
