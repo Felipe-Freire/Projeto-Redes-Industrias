@@ -64,6 +64,7 @@
         <Node name="_VisionGreenLid" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalBase" type="T_DINT" access="ReadWrite" />
         <Node name="_VisionMetalLid" type="T_DINT" access="ReadWrite" />
+        <Node name="_VisionSensorStorage" type="T_DINT" access="ReadWrite" />
         <Node name="GreenBase" type="T_sPusher" access="ReadWrite" />
         <Node name="GreenBaseClamp" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenBaseProductStop" type="T_BOOL" access="ReadWrite" />
@@ -102,6 +103,7 @@
         <Node name="MetalSetPointX" type="T_REAL" access="ReadWrite" />
         <Node name="MetalSetPointZ" type="T_REAL" access="ReadWrite" />
         <Node name="MetalTurn" type="T_sTurnable" access="ReadWrite" />
+        <Node name="StorageTurn" type="T_sTurnable" access="ReadWrite" />
       </Node>
       <Node name="POU_Conveyor">
         <Node name="ConveyorFinalGreenProduct1" type="T_BOOL" access="ReadWrite" />
