@@ -1,0 +1,16 @@
+﻿Id;Default;en;de;fr;it;es;zh-CHS;ru;ja
+ColBitmap;Bitmap;Bitmap;Symbol;Symbole;Simbolo;Simbolo;符号;Изображение;記号
+ColTimestamp;Timestamp;Timestamp;Zeitstempel;Horodatage;Timestamp;Marca de hora;时间戳;Временная отметка;タイムスタンプ
+ColTimestampActive;Timestamp active;Timestamp active;Zeitstempel aktiv;Horodatage active;Timestamp attivo;Marca de hora activa;时间戳激活;Временная отметка активна;タイムスタンプ 活性
+ColTimestampInactive;Timestamp inactive;Timestamp inactive;Zeitstempel inaktiv;Horodatage inactive;Timestamp inattivo;Marca de hora inactiva;时间戳非激活;Временная отметка неактивна;タイムスタンプ 非活性
+ColTimestampAcknowledge;Timestamp acknowledge;Timestamp acknowledge;Zeitstempel Bestätigung;Horodatage confirmation;Conferma timestamp;Confirmación marca de hora;时间戳确认;Подтверждение временной отметки;タイムスタンプ 確認
+ColValue;Value;Value;Wert;Valeur;Valore;Valor;值;Значение;値
+ColMessage;Message;Message;Meldungstext;Message;Testo del messaggio;Texto del mensaje;信息;Сообщение;メッセージ テキスト
+ColPriority;Priority;Priority;Priorität;Priorité ;Priorità;Prioridad;$;优先级;Приоритет;優先
+ColClass;Class;Class;Klasse;Classe;Classe;Clase;类;Kласс;クラス
+ColState;State;State;Zustand;Ètat;Stato;Estado;状态;Состояние;状態
+ColLatch;Latch;Latch;Latch-Variable;Variable Latch;Variabile Latch;Variable Latch;封锁变量;Триггер;ラッチ変数
+ColRemoteDev;Remote device;Remote device;Ferngesteuertes Gerät;Dispositif à distance;Dispositivo Remoto;Dispositivo remoto;远程设备;Удаленное устройство;リモート機器
+ColCommentAck;Acknowledge comment;Acknowledge comment;;;;;;;
+ColUserIdAck;Acknowledge User Id;Acknowledge User Id;;;;;;;
+;;;;;;;;;
