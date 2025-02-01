@@ -20,6 +20,17 @@
       <UserDefElement iecname="_FrontLimit" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Pusher" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
     </TypeUserDef>
+    <TypeUserDef name="T_sStackerCrane" size="15" nativesize="16" typeclass="Userdef" pouclass="STRUCTURE" iecname="sStackerCrane">
+      <UserDefElement iecname="MiddleLimit" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="LeftLimit" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RightLimit" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MovingZ" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MovingX" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Target" type="T_DINT" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Left" type="T_BOOL" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Right" type="T_BOOL" byteoffset="13" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Lift" type="T_BOOL" byteoffset="14" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
     <TypeUserDef name="T_sTurnable" size="7" nativesize="7" typeclass="Userdef" pouclass="STRUCTURE" iecname="sTurnable">
       <UserDefElement iecname="Turn" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="RollPositive" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
@@ -39,6 +50,8 @@
         <Node name="_DiffuseSensorMBox" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalBase" type="T_BOOL" access="ReadWrite" />
         <Node name="_DiffuseSensorMetalLid" type="T_BOOL" access="ReadWrite" />
+        <Node name="_DifuseSensorSG" type="T_BOOL" access="ReadWrite" />
+        <Node name="_DifuseSensorSM" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenBaseClamped" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenBaseSensorStop" type="T_BOOL" access="ReadWrite" />
         <Node name="_GreenLidClamped" type="T_BOOL" access="ReadWrite" />
@@ -82,6 +95,7 @@
         <Node name="GreenReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenSetPointX" type="T_REAL" access="ReadWrite" />
         <Node name="GreenSetPointZ" type="T_REAL" access="ReadWrite" />
+        <Node name="GreenStacker" type="T_sStackerCrane" access="ReadWrite" />
         <Node name="GreenTurn" type="T_sTurnable" access="ReadWrite" />
         <Node name="M1" type="T_sMachineCenter" access="ReadWrite" />
         <Node name="M2" type="T_sMachineCenter" access="ReadWrite" />
@@ -103,6 +117,7 @@
         <Node name="MetalReleaseProduct" type="T_BOOL" access="ReadWrite" />
         <Node name="MetalSetPointX" type="T_REAL" access="ReadWrite" />
         <Node name="MetalSetPointZ" type="T_REAL" access="ReadWrite" />
+        <Node name="MetalStacker" type="T_sStackerCrane" access="ReadWrite" />
         <Node name="MetalTurn" type="T_sTurnable" access="ReadWrite" />
         <Node name="StorageTurn" type="T_sTurnable" access="ReadWrite" />
       </Node>
@@ -127,6 +142,10 @@
         <Node name="GreenProductBaseConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenProductLidConveyor1" type="T_BOOL" access="ReadWrite" />
         <Node name="GreenProductLidConveyor2" type="T_BOOL" access="ReadWrite" />
+        <Node name="LoadingConveyor1Negative" type="T_BOOL" access="ReadWrite" />
+        <Node name="LoadingConveyor1Positive" type="T_BOOL" access="ReadWrite" />
+        <Node name="LoadingConveyor2Negative" type="T_BOOL" access="ReadWrite" />
+        <Node name="LoadingConveyor2Positive" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor1" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor2" type="T_BOOL" access="ReadWrite" />
         <Node name="MainProductionConveyor3" type="T_BOOL" access="ReadWrite" />
