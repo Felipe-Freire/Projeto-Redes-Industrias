@@ -9,11 +9,13 @@
     <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
     <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
     <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
-    <TypeUserDef name="T_sMachineCenter" size="4" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
+    <TypeUserDef name="T_sMachineCenter" size="12" nativesize="12" typeclass="Userdef" pouclass="STRUCTURE" iecname="sMachineCenter">
       <UserDefElement iecname="Start" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="Reset" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
       <UserDefElement iecname="ProduceLids" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="IsBusy" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Progress" type="T_DINT" byteoffset="8" vartype="VAR" access="ReadWrite" />
     </TypeUserDef>
     <TypeUserDef name="T_sPusher" size="3" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="sPusher">
       <UserDefElement iecname="_BackLimit" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
